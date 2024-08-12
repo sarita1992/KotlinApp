@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Viesure Test"
+rootProject.name = "Android Kotlin Application"
 include(":app")
  
