@@ -1,6 +1,6 @@
-package com.example.viesuretest.utils
+package com.example.android.utils
 
-import com.example.viesuretest.model.BookData
+import com.example.android.model.BookData
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

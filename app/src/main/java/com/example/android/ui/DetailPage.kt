@@ -1,4 +1,4 @@
-package com.example.viesuretest.ui
+package com.example.android.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -24,8 +24,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import com.example.viesuretest.model.BookData
-import com.example.viesuretest.utils.DateTime
+import com.example.android.model.BookData
+import com.example.android.utils.DateTime
 import com.google.gson.Gson
 
 @Composable
@@ -49,8 +49,6 @@ fun DetailPage(string: String?) {
                     style = MaterialTheme.typography.displaySmall
                 )
             }
-
-//            Spacer(modifier = Modifier.height(4.dp))
             Box(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text =  DateTime.getFormattedDate(data.release_date.toString()),

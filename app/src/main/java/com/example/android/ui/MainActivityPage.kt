@@ -1,4 +1,4 @@
-package com.example.viesuretest.ui
+package com.example.android.ui
 
 import android.content.Context
 import android.content.Intent
@@ -39,11 +39,11 @@ import androidx.compose.ui.unit.sp
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import coil.compose.rememberAsyncImagePainter
-import com.example.viesuretest.model.BookData
-import com.example.viesuretest.utils.Ascending
-import com.example.viesuretest.utils.Constant
-import com.example.viesuretest.view.DetailActivity
-import com.example.viesuretest.viewModel.UniConfigViewModel
+import com.example.android.model.BookData
+import com.example.android.utils.Ascending
+import com.example.android.utils.Constant
+import com.example.android.view.DetailActivity
+import com.example.android.viewModel.UniConfigViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.Collections
@@ -59,8 +59,7 @@ fun MainActivityPage(viewModel: UniConfigViewModel) {
     }
 
     if (errorState.isNotEmpty()) {
-        ShowErrorMessage(errorState)
-        GetData()
+        GetData(errorState)
     } else if (usersState.isEmpty()) {
         ShowLoading()
     } else {
@@ -174,24 +173,26 @@ fun onSurfaceClick(context: Context, bookData: BookData) {
 @Composable
 fun StoreData(usersState: List<BookData>) {
     val context = LocalContext.current
-
     val json = Gson().toJson(usersState)
     // on below line we are storing data in shared preferences file.
     getSharedPreferences(context).edit().putString("data", json).apply()
 }
 
 @Composable
-fun GetData() {
+fun GetData(errorState: String) {
     val context = LocalContext.current
 
     val string = getSharedPreferences(context).getString("data", "")
+    if(string?.isNotEmpty()!!){
     val type = object : TypeToken<ArrayList<BookData?>?>() {}.type
     val data = Gson().fromJson(string, type) as ArrayList<BookData>
-
-    LazyColumn {
-        items(data) { message ->
-            MessageCard(message)
+        LazyColumn {
+            items(data) { message ->
+                MessageCard(message)
+            }
         }
+    } else {
+        ShowErrorMessage(errorState)
     }
 }
 

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.viesuretest"
+    namespace = "com.example.android"
     compileSdk = 34
 
     buildFeatures {
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.viesuretest"
+        applicationId = "com.example.android"
         minSdk = 23
         targetSdk = 34
         versionCode = 1

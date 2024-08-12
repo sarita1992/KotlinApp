@@ -1,16 +1,14 @@
-package com.example.viesuretest
+package com.example.android
 
 
 
-import com.example.viesuretest.retrofitManager.ApiInterface
-import com.example.viesuretest.retrofitManager.UniversityRepo
-import com.example.viesuretest.retrofitManager.UniversityRepositoryImpl
-import com.example.viesuretest.viewModel.UniConfigViewModel
+import com.example.android.retrofitManager.ApiInterface
+import com.example.android.retrofitManager.UniversityRepo
+import com.example.android.retrofitManager.UniversityRepositoryImpl
+import com.example.android.viewModel.UniConfigViewModel
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -18,7 +16,6 @@ import retrofit2.CallAdapter
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 

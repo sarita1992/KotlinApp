@@ -1,4 +1,4 @@
-package com.example.viesuretest.model
+package com.example.android.model
 
 import java.io.Serializable
 

@@ -1,6 +1,6 @@
-package com.example.viesuretest.retrofitManager
+package com.example.android.retrofitManager
 
-import com.example.viesuretest.model.BookData
+import com.example.android.model.BookData
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 

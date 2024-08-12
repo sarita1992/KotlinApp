@@ -1,7 +1,7 @@
-package com.example.viesuretest.retrofitManager
+package com.example.android.retrofitManager
 
-import com.example.viesuretest.model.BookData
-import com.example.viesuretest.utils.UseCaseResult
+import com.example.android.model.BookData
+import com.example.android.utils.UseCaseResult
 
 
 interface UniversityRepo {

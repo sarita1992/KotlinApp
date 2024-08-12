@@ -1,10 +1,10 @@
-package com.example.viesuretest.viewModel
+package com.example.android.viewModel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.viesuretest.model.BookData
-import com.example.viesuretest.retrofitManager.UniversityRepo
-import com.example.viesuretest.utils.UseCaseResult
+import com.example.android.model.BookData
+import com.example.android.retrofitManager.UniversityRepo
+import com.example.android.utils.UseCaseResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

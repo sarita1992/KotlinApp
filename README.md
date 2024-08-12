@@ -1,5 +1,5 @@
 
-# Viesure Test
+# Android Kotlin App
 
 This is an Android application developed using Kotlin. The application is built with Android Studio Koala | 2024.1.1 and uses Gradle for build and dependency management.
 
@@ -38,16 +38,14 @@ The project uses the following dependencies:
 ##Application use cases:
 - Here I have used compose for UI design.
 - Retrofit used for api calling.
-- Flow use to handle the api faliure retry case.
-- For caching the books data I have used SharedPrefence with encription using the AndroidX Security Crypto.
-- When there is faliure in api the data will be shown from the cache value.
+- Flow use to handle the api failure retry case.
+- For caching the books data I have used SharedPreference with encryption using the AndroidX Security Crypto.
+- When there is failure in api the data will be shown from the cache value.
 - List of book is sorted from latest to old released date order.
 
-Note: Unit test is not done due to the time sortage but for functional testing I will use Mockito and for UI i will use Expresso library.
-If given bit more time i can do that as well.
 
 
 ## Authors
 
-- [@sunil](https://www.github.com/octokatherine)
+- [@sarita](https://github.com/sarita1992/AndroidKotlinApplication)
 

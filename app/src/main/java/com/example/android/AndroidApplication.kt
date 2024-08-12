@@ -1,4 +1,4 @@
-package com.example.viesuretest
+package com.example.android
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
@@ -7,12 +7,12 @@ import org.koin.core.context.startKoin
 
 
 @HiltAndroidApp
-class ViesureApp : Application() {
+class AndroidApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidContext(androidContext = this@ViesureApp)
+            androidContext(androidContext = this@AndroidApplication)
             modules(
                 listOf(appModules)
             )
